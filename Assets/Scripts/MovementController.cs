@@ -28,6 +28,6 @@ public class MovementController : MonoBehaviour
         rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
         rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
 
-        rb.MoveRotation(Quaternion.LookRotation(new Vector3(gameObject.transform.rotation.x, gameObject.transform.rotation.y, 0)));
+        //rb.MoveRotation(Quaternion.LookRotation(new Vector3(gameObject.transform.rotation.x, gameObject.transform.rotation.y, 0)));
     }
 }
