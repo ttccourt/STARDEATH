@@ -18,9 +18,9 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float ventralTrans = Input.GetAxis("Ventral");
+        float ventralTrans = Input.GetAxis("Horizontal");
         float lateralTrans = Input.GetAxis("Lateral");
-        float cranialTrans = Input.GetAxis("Cranial");
+        float cranialTrans = Input.GetAxis("Vertical");
         float pitch = Input.GetAxis("Pitch");
         float roll = Input.GetAxis("Roll");
         float yaw = Input.GetAxis("Yaw");
