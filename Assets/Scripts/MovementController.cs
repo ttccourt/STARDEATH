@@ -8,12 +8,20 @@ public class MovementController : MonoBehaviour
     public float rotationalThrust;
     public float translationalThrust;
 
-    private Rigidbody rb;
+    public bool rollDisabled;
 
-    // Start is called before the first frame update
+    private Rigidbody rb;
+    private AudioSource audio;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audio = GetComponent<AudioSource>();
+
+        if (rollDisabled)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        }
     }
 
     void FixedUpdate()
@@ -25,9 +33,19 @@ public class MovementController : MonoBehaviour
         float roll = Input.GetAxis("Roll");
         float yaw = Input.GetAxis("Yaw");
 
+        if (rollDisabled) roll = 0;
+  
+        if (ventralTrans + lateralTrans + cranialTrans + pitch + roll + yaw != 0) {
+            if (!audio.isPlaying)
+            {
+                audio.Play();
+            }
+        } else
+        {
+            audio.Stop();
+        }
+
         rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
         rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
-
-        //rb.MoveRotation(Quaternion.LookRotation(new Vector3(gameObject.transform.rotation.x, gameObject.transform.rotation.y, 0)));
     }
 }
