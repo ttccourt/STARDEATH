@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1688637876018361423}
   - component: {fileID: 1688637876018361422}
   - component: {fileID: 1688637876018361421}
-  - component: {fileID: 1688637876018361420}
+  - component: {fileID: 5184212879773153154}
   m_Layer: 0
   m_Name: Solar Panel
   m_TagString: Untagged
@@ -295,8 +295,8 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &1688637876018361420
-MeshCollider:
+--- !u!65 &5184212879773153154
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -305,10 +305,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.5, y: 0.5, z: -0.5}
 --- !u!1 &1688637876303028271
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +320,7 @@ GameObject:
   - component: {fileID: 1688637876303028276}
   - component: {fileID: 1688637876303028275}
   - component: {fileID: 1688637876303028274}
-  - component: {fileID: 1688637876303028273}
+  - component: {fileID: 1744244630966659257}
   m_Layer: 0
   m_Name: Solar Panel
   m_TagString: Untagged
@@ -604,8 +603,8 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &1688637876303028273
-MeshCollider:
+--- !u!65 &1744244630966659257
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -614,10 +613,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.5, y: 0.5, z: -0.5}
 --- !u!1 &1688637876745636541
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +661,7 @@ GameObject:
   - component: {fileID: 1688637877369581934}
   - component: {fileID: 1688637877369581933}
   - component: {fileID: 1688637877369581932}
+  - component: {fileID: 7284908990624160875}
   m_Layer: 0
   m_Name: Strut
   m_TagString: Untagged
@@ -3785,3 +3784,17 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!136 &7284908990624160875
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688637877369581930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 30
+  m_Direction: 1
+  m_Center: {x: 0, y: 14, z: -5}
