@@ -8035,7 +8035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcecd681bfece468b94f5d30177db06c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: 100
+  fuelLevel: 100
+  fuelMax: 100
+  fuelBurnSpeed: 0.01
   rotationalThrust: 15
   translationalThrust: 150
   rollDisabled: 0
