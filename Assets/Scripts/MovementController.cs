@@ -38,7 +38,7 @@ public class MovementController : MonoBehaviour
 
         if (rollDisabled) roll = 0;
 
-        float absTotalImpulse = 0;
+        float absTotalImpulse = 0;  // absolute value of the player's total impulse
         foreach (float direction in new float[]{ventralTrans, lateralTrans, cranialTrans, pitch, roll, yaw})
         {
             float absDirection = Mathf.Abs(direction);
@@ -57,9 +57,11 @@ public class MovementController : MonoBehaviour
         {
             audio.Stop();
         }
-  
 
-        rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
-        rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
+        if (fuelLevel > 0)
+        {
+            rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
+            rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
+        }
     }
 }
