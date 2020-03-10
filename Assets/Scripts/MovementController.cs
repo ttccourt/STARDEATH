@@ -14,12 +14,12 @@ public class MovementController : MonoBehaviour
     public bool rollDisabled;
 
     private Rigidbody rb;
-    private AudioSource audio;
+    private AudioSource rcsAudio;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        audio = GetComponent<AudioSource>();
+        rcsAudio = GetComponent<AudioSource>();
 
         if (rollDisabled)
         {
@@ -47,15 +47,15 @@ public class MovementController : MonoBehaviour
                 absTotalImpulse += absDirection;
                 fuelLevel -= absDirection * fuelBurnSpeed;
                 Debug.Log(fuelLevel);
-                if (!audio.isPlaying)
+                if (!rcsAudio.isPlaying)
                 {
-                    audio.Play();
+                    rcsAudio.Play();
                 }
             }
         }
-        if (absTotalImpulse == 0)
+        if (Mathf.Approximately(absTotalImpulse, 0))
         {
-            audio.Stop();
+            rcsAudio.Stop();
         }
 
         if (fuelLevel > 0)
