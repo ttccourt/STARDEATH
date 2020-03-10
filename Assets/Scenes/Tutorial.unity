@@ -8470,6 +8470,7 @@ MonoBehaviour:
   rotationalThrust: 15
   translationalThrust: 150
   rollDisabled: 0
+  fuelIndicator: {fileID: 987771821}
 --- !u!82 &1943200998
 AudioSource:
   m_ObjectHideFlags: 0

@@ -4,17 +4,52 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    public float fuelLevel = 100;
-    public float fuelMax = 100;
-    public float fuelBurnSpeed = 0.1f;
-
-    public float rotationalThrust;
-    public float translationalThrust;
+    public float rotationalThrust;  // how quickly do we pitch/yaw/roll?
+    public float translationalThrust;  // how quickly do we translate?
 
     public bool rollDisabled;
+    // rollDisabled sets a constraint, and disables reporting of roll input.
+    //
+    // This is only a temporary solution, and once a settings menu is implemented,
+    // this functionality will be moved to some SettingsController script.
+
+    public GameObject player;  // to access other scripts attached to player
+    private FuelLevelController playerFuelLevelController;
 
     private Rigidbody rb;
     private AudioSource rcsAudio;
+
+
+
+    float[] GetImpulse()
+    {
+        float ventralTrans = Input.GetAxis("Horizontal");
+        float lateralTrans = Input.GetAxis("Lateral");
+        float cranialTrans = Input.GetAxis("Vertical");
+        float pitch = Input.GetAxis("Pitch");
+        float roll = Input.GetAxis("Roll");
+        float yaw = Input.GetAxis("Yaw");
+
+        if (rollDisabled) roll = 0;  //if roll disabled, don't report 'fake roll'
+
+        return new float[] { ventralTrans, lateralTrans, cranialTrans, pitch, roll, yaw };
+    }
+
+    public float GetTotalImpulse()
+    {
+        float totalImpulse = 0;
+        foreach (float direction in GetImpulse())
+        {
+            float absDirection = Mathf.Abs(direction);
+            if (absDirection > 0)
+            {
+                totalImpulse += absDirection;
+            }
+        }
+        return totalImpulse;
+    }
+
+
 
     void Start()
     {
@@ -29,39 +64,20 @@ public class MovementController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float ventralTrans = Input.GetAxis("Horizontal");
-        float lateralTrans = Input.GetAxis("Lateral");
-        float cranialTrans = Input.GetAxis("Vertical");
-        float pitch = Input.GetAxis("Pitch");
-        float roll = Input.GetAxis("Roll");
-        float yaw = Input.GetAxis("Yaw");
 
-        if (rollDisabled) roll = 0;
-
-        float absTotalImpulse = 0;  // absolute value of the player's total impulse
-        foreach (float direction in new float[]{ventralTrans, lateralTrans, cranialTrans, pitch, roll, yaw})
-        {
-            float absDirection = Mathf.Abs(direction);
-            if (absDirection > 0)
-            {
-                absTotalImpulse += absDirection;
-                fuelLevel -= absDirection * fuelBurnSpeed;
-                Debug.Log(fuelLevel);
-                if (!rcsAudio.isPlaying)
-                {
-                    rcsAudio.Play();
-                }
-            }
-        }
-        if (Mathf.Approximately(absTotalImpulse, 0))
+        if (Mathf.Approximately(GetTotalImpulse(), 0))
         {
             rcsAudio.Stop();
         }
-
-        if (fuelLevel > 0)
+        else if (GetTotalImpulse() > 0 && !rcsAudio.isPlaying)
         {
-            rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
-            rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
+            rcsAudio.Play();
         }
+
+        //if (fuelLevel > 0)
+        //{
+        //    rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
+        //    rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
+        //}
     }
 }
