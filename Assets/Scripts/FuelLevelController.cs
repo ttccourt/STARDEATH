@@ -6,25 +6,20 @@ using UnityEngine.UI;
 public class FuelLevelController : MonoBehaviour
 {
     public Text indicator;
+
     public float startingFuelLevel;
     public float fuelBurnEfficiency = 0.1f;
-    public GameObject player;
 
-    private float fuelLevel;
+    public GameObject player;
     private MovementController playerMovementController;
 
-    public float FuelLevel
-    {
-        get
-        {
-            return fuelLevel;
-        }
-    }
+    // allow FuelLevel to be read but not written by other scripts
+    public float FuelLevel { get; private set; }
 
     // Start is called before the first frame update
     void Start()
     {
-        fuelLevel = startingFuelLevel;
+        FuelLevel = startingFuelLevel;
         playerMovementController = player.GetComponent<MovementController>();
     }
 
@@ -32,6 +27,7 @@ public class FuelLevelController : MonoBehaviour
     void FixedUpdate()
     {
         float totalImpulse = playerMovementController.GetTotalImpulse();
-        fuelLevel -= totalImpulse * fuelBurnEfficiency;
+        FuelLevel -= totalImpulse * fuelBurnEfficiency;
+        indicator.text = FuelLevel.ToString("000");
     }
 }

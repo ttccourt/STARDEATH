@@ -32,6 +32,8 @@ public class MovementController : MonoBehaviour
 
         if (rollDisabled) roll = 0;  //if roll disabled, don't report 'fake roll'
 
+        if (playerFuelLevelController.FuelLevel <= 0) return new float[] { 0, 0, 0, 0, 0, 0 };  // if no fuel, don't report impossible impulse
+
         return new float[] { ventralTrans, lateralTrans, cranialTrans, pitch, roll, yaw };
     }
 
@@ -56,6 +58,8 @@ public class MovementController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rcsAudio = GetComponent<AudioSource>();
 
+        playerFuelLevelController = player.GetComponent<FuelLevelController>();
+
         if (rollDisabled)
         {
             rb.constraints = RigidbodyConstraints.FreezeRotationZ;
@@ -74,10 +78,10 @@ public class MovementController : MonoBehaviour
             rcsAudio.Play();
         }
 
-        //if (fuelLevel > 0)
-        //{
-        //    rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
-        //    rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
-        //}
+        if (playerFuelLevelController.FuelLevel > 0)
+        {
+            //rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
+            //rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
+        }
     }
 }
