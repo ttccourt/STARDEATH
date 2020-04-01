@@ -1133,6 +1133,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
+    - target: {fileID: 241526372226049539, guid: f7a2b413e9648d04193381b4f61da169,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dd95c7c2d442b1498dcbacb24612f60, type: 2}
+    - target: {fileID: 772847500995598498, guid: f7a2b413e9648d04193381b4f61da169,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dd95c7c2d442b1498dcbacb24612f60, type: 2}
+    - target: {fileID: 2802105359241498053, guid: f7a2b413e9648d04193381b4f61da169,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dd95c7c2d442b1498dcbacb24612f60, type: 2}
+    - target: {fileID: 9038948883981789172, guid: f7a2b413e9648d04193381b4f61da169,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1dd95c7c2d442b1498dcbacb24612f60, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a2b413e9648d04193381b4f61da169, type: 3}
 --- !u!4 &1887462242 stripped
@@ -1382,7 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 987771821}
   startingFuelLevel: 100
-  fuelBurnEfficiency: 0.1
+  fuelBurnEfficiency: 0.01
   player: {fileID: 1943200991}
 --- !u!1 &1949867720
 GameObject:

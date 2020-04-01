@@ -36,7 +36,7 @@ public class MovementController : MonoBehaviour
         if (playerFuelLevelController.FuelLevel <= 0) return new Vector3[] { Vector3.zero, Vector3.zero };
 
         //return new float[] { ventralTrans, lateralTrans, cranialTrans, pitch, roll, yaw };
-        return new Vector3[] { new Vector3(ventralTrans, lateralTrans, cranialTrans), new Vector3(pitch, roll, yaw) };
+        return new Vector3[] { new Vector3(lateralTrans, cranialTrans, ventralTrans), new Vector3(pitch, yaw, roll) };
     }
 
     public float GetTotalImpulse()
