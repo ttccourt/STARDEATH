@@ -31,11 +31,8 @@ public class MovementController : MonoBehaviour
         float yaw = Input.GetAxis("Yaw");
 
         if (rollDisabled) roll = 0;  //if roll disabled, don't report 'fake roll'
+        if (playerFuelLevelController.FuelLevel <= 0) return new Vector3[] { Vector3.zero, Vector3.zero };  // if no fuel, don't report fake impulse
 
-        //if (playerFuelLevelController.FuelLevel <= 0) return new float[] { 0, 0, 0, 0, 0, 0 };  // if no fuel, don't report impossible impulse
-        if (playerFuelLevelController.FuelLevel <= 0) return new Vector3[] { Vector3.zero, Vector3.zero };
-
-        //return new float[] { ventralTrans, lateralTrans, cranialTrans, pitch, roll, yaw };
         return new Vector3[] { new Vector3(lateralTrans, cranialTrans, ventralTrans), new Vector3(pitch, yaw, roll) };
     }
 
@@ -47,14 +44,6 @@ public class MovementController : MonoBehaviour
         {
             ret += Mathf.Abs(impulse[0][i]) + Mathf.Abs(impulse[1][i]);
         }
-        //foreach (float direction in GetImpulse())
-        //{
-        //    float absDirection = Mathf.Abs(direction);
-        //    if (absDirection > 0)
-        //    {
-        //        totalImpulse += absDirection;
-        //    }
-        //}
         return ret;
     }
 
@@ -89,8 +78,6 @@ public class MovementController : MonoBehaviour
         {
             rb.AddRelativeForce(GetImpulse()[0] * translationalThrust);
             rb.AddRelativeTorque(GetImpulse()[1] * translationalThrust);
-            //rb.AddRelativeForce(new Vector3(lateralTrans * translationalThrust, cranialTrans * translationalThrust, ventralTrans * translationalThrust));
-            //rb.AddRelativeTorque(new Vector3(pitch * rotationalThrust, yaw * rotationalThrust, roll * rotationalThrust));
         }
     }
 }
