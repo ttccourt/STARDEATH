@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovementController : MonoBehaviour
 {
     public float rotationalThrust;  // how quickly do we pitch/yaw/roll?
     public float translationalThrust;  // how quickly do we translate?
+
+    public float speedAlertThreshold;
+    public Text cranialSpeedometer;
+    public Text lateralSpeedometer;
+    public Text ventralSpeedometer;
 
     public bool rollDisabled;
     // rollDisabled sets a constraint, and disables reporting of roll input.
@@ -62,18 +68,29 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void Update()
     {
-
+        // handle RCS noises
         if (Mathf.Approximately(GetTotalImpulse(), 0))
         {
             rcsAudio.Stop();
-        }
-        else if (GetTotalImpulse() > 0 && !rcsAudio.isPlaying)
+        } else if (GetTotalImpulse() > 0 && !rcsAudio.isPlaying)
         {
             rcsAudio.Play();
         }
 
+        // update speedometers
+        // this uses LOCAL reference frame... 
+        // so, if the player doesn't arrest their rotation, they will be confused...
+        Vector3 localSpeed = transform.InverseTransformDirection(rb.velocity);
+        lateralSpeedometer.text = localSpeed.x.ToString("000");
+        cranialSpeedometer.text = localSpeed.y.ToString("000");
+        ventralSpeedometer.text = localSpeed.z.ToString("000");
+    }
+
+    void FixedUpdate()
+    {
+        // apply relevant forces every physics step
         if (playerFuelLevelController.FuelLevel > 0)
         {
             rb.AddRelativeForce(GetImpulse()[0] * translationalThrust);
