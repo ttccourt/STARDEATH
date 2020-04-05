@@ -11,7 +11,6 @@ public class FuelLevelController : MonoBehaviour
     public float fuelBurnEfficiency = 0.1f;
     public float fuelAlertThreshold = 0.1f;
 
-    public GameObject player;
     private MovementController playerMovementController;
 
     private bool indicatorFlashing = false;
@@ -23,7 +22,7 @@ public class FuelLevelController : MonoBehaviour
     void Start()
     {
         FuelLevel = startingFuelLevel;
-        playerMovementController = player.GetComponent<MovementController>();
+        playerMovementController = this.gameObject.GetComponent<MovementController>();
         InvokeRepeating("DoFlashIfSet", 0, 0.333333f);
     }
 
