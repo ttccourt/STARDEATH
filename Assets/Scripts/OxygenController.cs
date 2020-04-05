@@ -11,7 +11,11 @@ public class OxygenController : MonoBehaviour
     public float oxyPerMinute = 5;
     public float oxyAlertThreshold = 0.1f;
 
+    public AudioSource alertSFXSource;
+    public AudioSource alertVoiceSource;
+
     private bool indicatorFlashing = false;
+    private bool alertPlaying = false;
 
 
     // allow OxyLevel to be read but not written by other scripts
@@ -51,10 +55,19 @@ public class OxygenController : MonoBehaviour
         if (OxyLevel < startingOxyLevel * oxyAlertThreshold)
         {
             indicatorFlashing = true;
+            if (!alertPlaying)
+            {
+                alertPlaying = true;
+                alertSFXSource.Play();
+                Debug.Log("Playing");
+                //alertVoiceSource.Play();
+            }
         }
         else
         {
             indicatorFlashing = false;
+            alertSFXSource.Stop();
+            alertPlaying = false;
         }
     }
 }
