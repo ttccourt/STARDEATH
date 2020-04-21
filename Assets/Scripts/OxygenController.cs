@@ -8,6 +8,7 @@ public class OxygenController : MonoBehaviour
     public Text indicator;
 
     public float startingOxyLevel = 50;
+    public float maxOxyLevel = 50;
     public float oxyPerMinute = 5;
     public float oxyAlertThreshold = 0.1f;
 
@@ -42,6 +43,15 @@ public class OxygenController : MonoBehaviour
             }
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("oxyContainer")) {
+            O2Container container = other.gameObject.GetComponent("O2Container") as O2Container;
+            OxyLevel += container.consume(maxOxyLevel - OxyLevel);
+            Debug.Log("consumed!");
+        }
     }
 
     void FixedUpdate()
