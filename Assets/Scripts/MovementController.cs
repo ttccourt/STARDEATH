@@ -92,6 +92,12 @@ public class MovementController : MonoBehaviour
         cranialSpeedometer.text = localSpeed.y.ToString("000");
         ventralSpeedometer.text = localSpeed.z.ToString("000");
 
+        // check if AutoArrest is being toggled
+        if (Input.GetButtonDown("Toggle AutoArrest"))
+        {
+            autoArrest = !autoArrest;
+        }
+
         // update AutoArrest indicator
         autoArrestIndicator.enabled = autoArrest;
     }
