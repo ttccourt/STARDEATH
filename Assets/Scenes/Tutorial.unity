@@ -2654,6 +2654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationalThrust: 15
   translationalThrust: 150
+  autoArrest: 1
+  autoArrestThreshold: 0.1
   speedAlertThreshold: 0
   cranialSpeedometer: {fileID: 463090292}
   lateralSpeedometer: {fileID: 1547517808}
@@ -2882,6 +2884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 943528077}
   startingOxyLevel: 50
+  maxOxyLevel: 50
   oxyPerMinute: 5
   oxyAlertThreshold: 0.15
   alertSFXSource: {fileID: 1943201002}
