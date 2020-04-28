@@ -11,6 +11,7 @@ public class MovementController : MonoBehaviour
     public bool autoArrest;
     public float autoArrestTranslationThreshold = 0.1f;
     public float autoArrestRotationThreshold = 0.1f;
+    public Text autoArrestIndicator;
 
     public float speedAlertThreshold;
     public Text cranialSpeedometer;
@@ -90,6 +91,9 @@ public class MovementController : MonoBehaviour
         lateralSpeedometer.text = localSpeed.x.ToString("000");
         cranialSpeedometer.text = localSpeed.y.ToString("000");
         ventralSpeedometer.text = localSpeed.z.ToString("000");
+
+        // update AutoArrest indicator
+        autoArrestIndicator.enabled = autoArrest;
     }
 
     void FixedUpdate()
