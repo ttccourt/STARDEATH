@@ -8,6 +8,11 @@ public class MovementController : MonoBehaviour
     public float rotationalThrust;  // how quickly do we pitch/yaw/roll?
     public float translationalThrust;  // how quickly do we translate?
 
+    public bool autoArrest;
+    public float autoArrestTranslationThreshold = 0.1f;
+    public float autoArrestRotationThreshold = 0.1f;
+    public Text autoArrestIndicator;
+
     public float speedAlertThreshold;
     public Text cranialSpeedometer;
     public Text lateralSpeedometer;
@@ -86,6 +91,15 @@ public class MovementController : MonoBehaviour
         lateralSpeedometer.text = localSpeed.x.ToString("000");
         cranialSpeedometer.text = localSpeed.y.ToString("000");
         ventralSpeedometer.text = localSpeed.z.ToString("000");
+
+        // check if AutoArrest is being toggled
+        if (Input.GetButtonDown("Toggle AutoArrest"))
+        {
+            autoArrest = !autoArrest;
+        }
+
+        // update AutoArrest indicator
+        autoArrestIndicator.enabled = autoArrest;
     }
 
     void FixedUpdate()
@@ -95,6 +109,20 @@ public class MovementController : MonoBehaviour
         {
             rb.AddRelativeForce(GetImpulse()[0] * translationalThrust);
             rb.AddRelativeTorque(GetImpulse()[1] * translationalThrust);
+        }
+
+        Debug.Log(GetTotalImpulse());
+        if (autoArrest && Mathf.Approximately(GetTotalImpulse(), 0)) {
+            // arrest any trans/rot under a threshold
+            if (rb.velocity.magnitude < autoArrestTranslationThreshold)
+            {
+                rb.velocity = Vector3.zero;
+            }
+            
+            if (rb.angularVelocity.magnitude < autoArrestRotationThreshold)
+            {
+                rb.angularVelocity = Vector3.zero;
+            }
         }
     }
 }
