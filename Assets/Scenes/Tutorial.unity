@@ -3027,7 +3027,7 @@ MonoBehaviour:
   rotationalThrust: 15
   translationalThrust: 150
   autoArrest: 0
-  autoArrestTranslationThreshold: 0.1
+  autoArrestTranslationThreshold: 1
   autoArrestRotationThreshold: 0.1
   autoArrestIndicator: {fileID: 551187412}
   speedAlertThreshold: 0
