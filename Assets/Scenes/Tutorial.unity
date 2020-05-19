@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.061980188, g: 0.07700249, b: 0.07422567, a: 1}
+  m_IndirectSpecularColor: {r: 0.06086359, g: 0.077055044, b: 0.07323859, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1929,6 +1929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1426498245}
   - component: {fileID: 1426498246}
+  - component: {fileID: 1426498247}
   m_Layer: 0
   m_Name: Flashlight
   m_TagString: Untagged
@@ -2011,6 +2012,18 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1426498247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426498244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f90db2eb186b041a8b8ba964ab3f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1447120886
 PrefabInstance:
   m_ObjectHideFlags: 0
