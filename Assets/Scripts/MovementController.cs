@@ -111,7 +111,7 @@ public class MovementController : MonoBehaviour
             rb.AddRelativeTorque(GetImpulse()[1] * translationalThrust);
         }
 
-        Debug.Log(GetTotalImpulse());
+
         if (autoArrest && Mathf.Approximately(GetTotalImpulse(), 0)) {
             // arrest any trans/rot under a threshold
             if (rb.velocity.magnitude < autoArrestTranslationThreshold)
