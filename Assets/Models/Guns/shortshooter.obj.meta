@@ -1,9 +1,69 @@
 fileFormatVersion: 2
-guid: be1a0412d1bef534e98f06f0063b5a0d
+guid: 8454a8afbfff6044f88d987e1fa7f9b8
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body10Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body11Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body12Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body14Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body16Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body18Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body26Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body27Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body2Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body3Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body4Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body5Mat
+    second: {fileID: 2100000, guid: 38eea10d503f432469dacc7b42d0cf2a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
