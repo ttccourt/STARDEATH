@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36203549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 2bdc3dff7fb932f4e8ba3b7c29a60350,
+    type: 3}
+  m_PrefabInstance: {fileID: 848047074}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &83967279
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +219,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83967279}
   m_CullTransparentMesh: 0
+--- !u!1 &94218910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8454a8afbfff6044f88d987e1fa7f9b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1526153520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &145278352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297,6 +309,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c77fdc14e8ae0c74395b05b7aca26267,
     type: 3}
   m_PrefabInstance: {fileID: 145278352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &181523120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 57897060313f009409404c54e7765dbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 837942844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &244640307
 GameObject:
@@ -982,6 +1000,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 600456334}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &662982629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c77fdc14e8ae0c74395b05b7aca26267,
+    type: 3}
+  m_PrefabInstance: {fileID: 145278352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1235,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 57897060313f009409404c54e7765dbf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 57897060313f009409404c54e7765dbf,
         type: 3}
@@ -1364,7 +1388,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 2bdc3dff7fb932f4e8ba3b7c29a60350,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 2bdc3dff7fb932f4e8ba3b7c29a60350,
         type: 3}
@@ -2715,7 +2739,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8454a8afbfff6044f88d987e1fa7f9b8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8454a8afbfff6044f88d987e1fa7f9b8,
         type: 3}
@@ -2856,6 +2880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1597411281}
+  - component: {fileID: 1597411282}
   m_Layer: 0
   m_Name: Gun Hand
   m_TagString: Untagged
@@ -2875,12 +2900,30 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 145278353}
+  - {fileID: 1526153521}
   - {fileID: 5006512735591617830}
   - {fileID: 848047075}
-  - {fileID: 1526153521}
   m_Father: {fileID: 1943200995}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1597411282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597411280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e65b2eeba62e947b4b88b0a6d47c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 662982629}
+  - {fileID: 94218910}
+  - {fileID: 181523120}
+  - {fileID: 36203549}
+  selectedGun: {fileID: 662982629}
 --- !u!1 &1639182619
 GameObject:
   m_ObjectHideFlags: 0
