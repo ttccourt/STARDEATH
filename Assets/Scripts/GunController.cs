@@ -6,12 +6,20 @@ public class GunController : MonoBehaviour
 {
     public GameObject[] guns;
     public GameObject selectedGun;
+    Animator anim;
+
+    private void Start()
+    {
+        
+    }
 
     void SelectGun(int gun)
     {
         selectedGun.SetActive(false);
         selectedGun = guns[gun];
         selectedGun.SetActive(true);
+        anim = selectedGun.GetComponent<Animator>();
+        anim.SetTrigger("Draw Gun");
     }
 
 
