@@ -1089,6 +1089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 761477656}
   - component: {fileID: 761477657}
+  - component: {fileID: 761477658}
   m_Layer: 0
   m_Name: pulsar_container
   m_TagString: Untagged
@@ -1130,6 +1131,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &761477658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761477655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletsPerSecond: 5
+  bulletSpeed: 250
+  bulletDamage: 35
+  maxBulletsLoaded: 10
+  bulletsLoaded: 10
+  bulletsHeld: 30
+  recoilTranslate: {x: 0, y: 0, z: 0}
+  recoilRotate: {x: 0, y: 0, z: 0}
+  scope: 0
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &792348404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880696320}
   - component: {fileID: 880696321}
+  - component: {fileID: 880696322}
   m_Layer: 0
   m_Name: lsr-05_container
   m_TagString: Untagged
@@ -1521,6 +1545,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &880696322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880696319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletsPerSecond: 0.5
+  bulletSpeed: 750
+  bulletDamage: 150
+  maxBulletsLoaded: 5
+  bulletsLoaded: 5
+  bulletsHeld: 20
+  recoilTranslate: {x: 0, y: 0, z: 0}
+  recoilRotate: {x: 0, y: 0, z: 0}
+  scope: 1
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &888027510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,6 +2460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372371490}
   - component: {fileID: 1372371491}
+  - component: {fileID: 1372371492}
   m_Layer: 0
   m_Name: bl48_container
   m_TagString: Untagged
@@ -2455,6 +2502,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1372371492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372371489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletsPerSecond: 10
+  bulletSpeed: 215
+  bulletDamage: 45
+  maxBulletsLoaded: 20
+  bulletsLoaded: 20
+  bulletsHeld: 40
+  recoilTranslate: {x: 0, y: 0, z: 0}
+  recoilRotate: {x: 0, y: 0, z: 0}
+  scope: 0
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &1377879964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,6 +3104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567403404}
   - component: {fileID: 1567403405}
+  - component: {fileID: 1567403406}
   m_Layer: 0
   m_Name: shortshooter_container
   m_TagString: Untagged
@@ -3076,6 +3146,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1567403406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567403403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletsPerSecond: 18
+  bulletSpeed: 300
+  bulletDamage: 20
+  maxBulletsLoaded: 30
+  bulletsLoaded: 30
+  bulletsHeld: 90
+  recoilTranslate: {x: 0, y: 0, z: 0}
+  recoilRotate: {x: 0, y: 0, z: 0}
+  scope: 0
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &1597411280
 GameObject:
   m_ObjectHideFlags: 0
