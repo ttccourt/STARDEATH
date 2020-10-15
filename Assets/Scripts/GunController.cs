@@ -11,7 +11,7 @@ public class GunController : MonoBehaviour
     private void Fire()
     {
         GameObject bullet = Instantiate(selectedGun.GetComponent<Gun>().bullet, transform.position+new Vector3(0, 0.5f, 0.75f), transform.rotation);
-        bullet.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,0,10));
+        bullet.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,0,1));
     }
 
     void SelectGun(int gun)
@@ -21,7 +21,6 @@ public class GunController : MonoBehaviour
         selectedGun.SetActive(true);
         anim = selectedGun.GetComponent<Animator>();
         anim.SetTrigger("Draw Gun");
-        Fire();
     }
 
 
@@ -43,6 +42,14 @@ public class GunController : MonoBehaviour
         if (Input.GetButtonDown("Select Sniper"))
         {
             SelectGun(3);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetButtonDown("Fire"))
+        {
+            Fire();
         }
     }
 }
