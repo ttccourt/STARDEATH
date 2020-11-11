@@ -7,6 +7,7 @@ public class MovementController : MonoBehaviour
 {
     public float rotationalThrust;  // how quickly do we pitch/yaw/roll?
     public float translationalThrust;  // how quickly do we translate?
+    public Vector3 rotationalCorrection; // correct for torque disparity (rotating Y axis is much easier)
 
     public bool autoArrest;
     public float autoArrestTranslationThreshold = 0.1f;
@@ -108,7 +109,8 @@ public class MovementController : MonoBehaviour
         if (playerFuelLevelController.FuelLevel > 0)
         {
             rb.AddRelativeForce(GetImpulse()[0] * translationalThrust);
-            rb.AddRelativeTorque(GetImpulse()[1] * translationalThrust);
+            Debug.Log(Vector3.Scale(GetImpulse()[1] * rotationalThrust, rotationalCorrection));
+            rb.AddRelativeTorque(Vector3.Scale(GetImpulse()[1] * rotationalThrust, rotationalCorrection));
         }
 
 
