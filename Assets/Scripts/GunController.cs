@@ -6,12 +6,13 @@ public class GunController : MonoBehaviour
 {
     public GameObject[] guns;
     public GameObject selectedGun;
+    public GameObject muzzle;
     Animator anim;
 
     private void Fire()
     {
-        GameObject bullet = Instantiate(selectedGun.GetComponent<Gun>().bullet, transform.position+new Vector3(0, 0.5f, 0.75f), transform.rotation);
-        bullet.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,0,1));
+        GameObject bullet = Instantiate(selectedGun.GetComponent<Gun>().bullet, muzzle.transform.position, transform.rotation);
+        bullet.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,0,10));
     }
 
     void SelectGun(int gun)
