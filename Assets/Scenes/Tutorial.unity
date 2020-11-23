@@ -1143,16 +1143,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsPerSecond: 5
-  bulletSpeed: 250
-  bulletDamage: 35
-  maxBulletsLoaded: 10
-  bulletsLoaded: 10
-  bulletsHeld: 30
+  bulletsPerSecond: 0
+  bulletSpeed: 0
+  bulletDamage: 0
+  maxBulletsLoaded: 0
+  bulletsLoaded: 0
+  bulletsHeld: 0
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
+  bullet: {fileID: 0}
 --- !u!1 &792348404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,16 +1557,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsPerSecond: 0.5
-  bulletSpeed: 750
-  bulletDamage: 150
-  maxBulletsLoaded: 5
-  bulletsLoaded: 5
-  bulletsHeld: 20
+  bulletsPerSecond: 0
+  bulletSpeed: 0
+  bulletDamage: 0
+  maxBulletsLoaded: 0
+  bulletsLoaded: 0
+  bulletsHeld: 0
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
-  scope: 1
-  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
+  scope: 0
+  bullet: {fileID: 0}
 --- !u!1 &888027510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,16 +2514,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsPerSecond: 10
-  bulletSpeed: 215
-  bulletDamage: 45
-  maxBulletsLoaded: 20
-  bulletsLoaded: 20
-  bulletsHeld: 40
+  bulletsPerSecond: 0
+  bulletSpeed: 0
+  bulletDamage: 0
+  maxBulletsLoaded: 0
+  bulletsLoaded: 0
+  bulletsHeld: 0
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
+  bullet: {fileID: 0}
 --- !u!1 &1377879964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,16 +3158,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae0fb0d76e332048b09b9d49eb7f8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletsPerSecond: 18
-  bulletSpeed: 300
-  bulletDamage: 20
-  maxBulletsLoaded: 30
-  bulletsLoaded: 30
-  bulletsHeld: 90
+  bulletsPerSecond: 0
+  bulletSpeed: 0
+  bulletDamage: 0
+  maxBulletsLoaded: 0
+  bulletsLoaded: 0
+  bulletsHeld: 0
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
+  bullet: {fileID: 0}
 --- !u!1 &1597411280
 GameObject:
   m_ObjectHideFlags: 0
@@ -3217,9 +3217,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guns:
   - {fileID: 761477655}
-  - {fileID: 1567403403}
   - {fileID: 1372371489}
   - {fileID: 880696319}
+  - {fileID: 1567403403}
   selectedGun: {fileID: 761477655}
 --- !u!1 &1639182619
 GameObject:
