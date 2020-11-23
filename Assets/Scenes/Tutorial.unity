@@ -1152,7 +1152,7 @@ MonoBehaviour:
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &792348404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &888027510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,7 +2523,7 @@ MonoBehaviour:
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &1377879964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,7 +3167,7 @@ MonoBehaviour:
   recoilTranslate: {x: 0, y: 0, z: 0}
   recoilRotate: {x: 0, y: 0, z: 0}
   scope: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 6984743383440831022, guid: d8c27b3ca39ed834fbf15325b259df08, type: 3}
 --- !u!1 &1597411280
 GameObject:
   m_ObjectHideFlags: 0
