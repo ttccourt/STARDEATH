@@ -462,12 +462,12 @@ PrefabInstance:
     - target: {fileID: 3468477808421086002, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5261007334542857408, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5485318727930535856, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
@@ -507,7 +507,7 @@ PrefabInstance:
     - target: {fileID: 8935582717016368537, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f44baba741aed498453a781eb4c5c7, type: 3}
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 708380002}
   - component: {fileID: 708380001}
   - component: {fileID: 708380000}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Opponent2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1611,7 +1611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708379999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55, y: 0, z: 0}
+  m_LocalPosition: {x: -50.83, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 643637106}
@@ -2054,7 +2054,7 @@ GameObject:
   - component: {fileID: 851475236}
   - component: {fileID: 851475235}
   - component: {fileID: 851475234}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Opponent3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2447,7 +2447,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851475233}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55, y: 0, z: 0}
+  m_LocalPosition: {x: -46.34, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1481447963}
@@ -2471,7 +2471,7 @@ GameObject:
   - component: {fileID: 860730713}
   - component: {fileID: 860730712}
   - component: {fileID: 860730711}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: TeamMember2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3286,7 +3286,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 567
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -3629,12 +3629,12 @@ PrefabInstance:
     - target: {fileID: 3468477808421086002, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5261007334542857408, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5485318727930535856, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
@@ -3674,7 +3674,7 @@ PrefabInstance:
     - target: {fileID: 8935582717016368537, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f44baba741aed498453a781eb4c5c7, type: 3}
@@ -3985,12 +3985,12 @@ PrefabInstance:
     - target: {fileID: 3468477808421086002, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5261007334542857408, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5485318727930535856, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
@@ -4030,7 +4030,7 @@ PrefabInstance:
     - target: {fileID: 8935582717016368537, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f44baba741aed498453a781eb4c5c7, type: 3}
@@ -4218,7 +4218,7 @@ GameObject:
   - component: {fileID: 1269456828}
   - component: {fileID: 1269456827}
   - component: {fileID: 1269456826}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Opponent1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5381,7 +5381,7 @@ GameObject:
   - component: {fileID: 1655902240}
   - component: {fileID: 1655902239}
   - component: {fileID: 1655902238}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: TeamMember1
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6191,12 +6191,12 @@ PrefabInstance:
     - target: {fileID: 3468477808421086002, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5261007334542857408, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5485318727930535856, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
@@ -6236,7 +6236,7 @@ PrefabInstance:
     - target: {fileID: 8935582717016368537, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f44baba741aed498453a781eb4c5c7, type: 3}
@@ -6665,12 +6665,12 @@ PrefabInstance:
     - target: {fileID: 3468477808421086002, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5261007334542857408, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5485318727930535856, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
@@ -6710,7 +6710,7 @@ PrefabInstance:
     - target: {fileID: 8935582717016368537, guid: 15f44baba741aed498453a781eb4c5c7,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f44baba741aed498453a781eb4c5c7, type: 3}
